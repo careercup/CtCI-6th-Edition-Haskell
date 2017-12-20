@@ -23,24 +23,24 @@ testQueue =
     it "should maintain FIFO order" $ do
       peek enqueueQueue `shouldBe` Just 1
       peek dequeueQueue `shouldBe` Just 3
-    describe "Eq instance" $ do
-      it "should maintain equality if regardless of enqueue/dequeue state" $ do
+    describe "Eq instance" $
+      it "should maintain equality if regardless of enqueue/dequeue state" $
         (Queue [1,2,3] [] == Queue [] [3,2,1]) `shouldBe` True
-    describe "mkQueue" $ do
-      it "should create a single element queue" $ do
+    describe "mkQueue" $
+      it "should create a single element queue" $
         mkQueue 1 `shouldBe` Queue [1] []
-    describe "enqueue" $ do
-      it "should add an element to the queue" $ do
+    describe "enqueue" $
+      it "should add an element to the queue" $
         enqueue 1 emptyQueue `shouldBe` Queue [1] []
-    describe "dequeue" $ do
-      it "should remove an element from the queue" $ do
+    describe "dequeue" $
+      it "should remove an element from the queue" $
         dequeue exQueue `shouldBe` Queue [] [4,3,2,1]
     describe "peek" $ do
-      it "should return the next element in the queue if it exists" $ do
+      it "should return the next element in the queue if it exists" $
         peek exQueue `shouldBe` Just 5
-      it "should not crash on an empty queue" $ do
+      it "should not crash on an empty queue" $
         peek emptyQueue `shouldBe` (Nothing :: Maybe Int)
-    describe "isEmpty" $ do
+    describe "isEmpty" $
       it "should tell if a given queue is empty" $ do
         isEmpty emptyQueue `shouldBe` True
         isEmpty exQueue `shouldBe` False

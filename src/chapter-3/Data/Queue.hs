@@ -17,12 +17,12 @@ enqueue a (Queue xs ys) = Queue (a:xs) ys
 dequeue :: Queue a -> Queue a
 dequeue q = case reorder q of 
   (Queue xs (y:ys)) -> Queue xs ys
-  otherwise -> reorder q
+  _                 -> reorder q
 
 peek :: Queue a -> Maybe a
 peek a = case reorder a of
   (Queue _ (y:ys)) -> Just y
-  otherwise        -> Nothing
+  _                -> Nothing
 
 isEmpty :: Queue a -> Bool
 isEmpty (Queue [] []) = True

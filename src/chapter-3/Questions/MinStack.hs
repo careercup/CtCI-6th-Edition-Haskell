@@ -21,7 +21,7 @@ pop ms@(MinStack s1 s2) = case (S.peek s1, S.peek s2) of
   (Just a, Just b) -> if a > b 
                       then MinStack (S.pop s1) s2
                       else MinStack (S.pop s1) (S.pop s2)
-  otherwise -> ms
+  _                -> ms
 
 
 smin :: MinStack a -> Maybe a

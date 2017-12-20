@@ -1,6 +1,6 @@
 module Data.Stack where
 
-data Stack a = Stack [a]
+newtype Stack a = Stack [a]
   deriving (Eq, Show)
 
 push :: a -> Stack a -> Stack a
