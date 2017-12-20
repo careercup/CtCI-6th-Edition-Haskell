@@ -36,7 +36,7 @@ library
       src
 
   exposed-modules:
-      Introduction.VI.BigO.Example01
+      Introduction.VI.Example01
 
   other-modules:       
 
@@ -58,8 +58,8 @@ test-suite CtCI-6th-Edition-Haskell-Tests
     , test
 
   other-modules:
-      Introduction.VI.BigO.Example01
-    , Introduction.VI.BigO.Example01Spec
+      Introduction.VI.Example01
+    , Introduction.VI.Example01Spec
 
   build-tool-depends:
       hspec-discover:hspec-discover == 2.4.*
