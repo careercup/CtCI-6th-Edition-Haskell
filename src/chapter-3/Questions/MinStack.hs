@@ -11,7 +11,7 @@ data MinStack a = MinStack (S.Stack a) (S.Stack a)
 
 push :: Ord a => a -> MinStack a -> MinStack a
 push a (MinStack s1 (S.Stack [])) = MinStack (S.push a s1) (S.mkStack a)
-push a (MinStack s1 s2@(S.Stack (x:xs))) =
+push a (MinStack s1 s2@(S.Stack (x:_))) =
   if a <= x
   then MinStack (S.push a s1) (S.push a s2)
   else MinStack (S.push a s1) s2
@@ -21,7 +21,7 @@ pop ms@(MinStack s1 s2) = case (S.peek s1, S.peek s2) of
   (Just a, Just b) -> if a > b 
                       then MinStack (S.pop s1) s2
                       else MinStack (S.pop s1) (S.pop s2)
-  otherwise -> ms
+  _                -> ms
 
 
 smin :: MinStack a -> Maybe a
