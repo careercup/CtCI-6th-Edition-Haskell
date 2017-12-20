@@ -1,6 +1,5 @@
 module Ch3 where
 
-import Test.QuickCheck
 import Test.Hspec
 import Test.Stack
 import Test.Queue

@@ -2,7 +2,6 @@ module Test.Stack where
 
 import Data.Stack
 import Test.Hspec
-import Test.QuickCheck
 import Data.Maybe (fromMaybe)
 
 exStack :: Stack Int
@@ -26,7 +25,7 @@ testStack =
 
     describe "mkStack" $
       it "should create a single element Stack" $
-        mkStack 1 `shouldBe` Stack [1]
+        mkStack 1 `shouldBe` (Stack [1] :: Stack Int)
     describe "push" $
       it "should add an element to the stack" $ do
         push 0 exStack `shouldBe` Stack [0,1,2,3,4,5]

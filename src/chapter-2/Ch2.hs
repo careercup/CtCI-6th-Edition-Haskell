@@ -1,6 +1,5 @@
 module Ch2 where
 
-import Test.QuickCheck
 import Test.Hspec
 
 ch2 :: IO ()

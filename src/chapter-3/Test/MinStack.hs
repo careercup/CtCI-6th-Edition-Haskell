@@ -1,10 +1,10 @@
 module Test.MinStack where
 
-import Test.QuickCheck
 import Test.Hspec
 import Questions.MinStack
 import qualified Data.Stack as S
 
+exStack :: MinStack Int
 exStack = push 1 (push 7 (push 2 (push 6 (mkMinStack 9))))
 
 testMinStack :: SpecWith ()

@@ -1,6 +1,5 @@
 module Test.Queue where
 
-import Test.QuickCheck
 import Test.Hspec
 import Data.Queue
 
@@ -25,13 +24,13 @@ testQueue =
       peek dequeueQueue `shouldBe` Just 3
     describe "Eq instance" $
       it "should maintain equality if regardless of enqueue/dequeue state" $
-        (Queue [1,2,3] [] == Queue [] [3,2,1]) `shouldBe` True
+        Queue [1,2,3] [] `shouldBe` (Queue [] [3,2,1] :: Queue Int)
     describe "mkQueue" $
       it "should create a single element queue" $
-        mkQueue 1 `shouldBe` Queue [1] []
+        mkQueue 1 `shouldBe` (Queue [1] [] :: Queue Int)
     describe "enqueue" $
       it "should add an element to the queue" $
-        enqueue 1 emptyQueue `shouldBe` Queue [1] []
+        enqueue 1 emptyQueue `shouldBe` (Queue [1] [] :: Queue Int)
     describe "dequeue" $
       it "should remove an element from the queue" $
         dequeue exQueue `shouldBe` Queue [] [4,3,2,1]
