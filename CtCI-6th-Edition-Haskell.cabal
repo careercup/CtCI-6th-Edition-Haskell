@@ -42,6 +42,7 @@ library
     , Introduction.VI.Example04
     , Introduction.VI.Example05
     , Introduction.VI.Example06
+    , Introduction.VI.Example07
 
   other-modules:       
 
