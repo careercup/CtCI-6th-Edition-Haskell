@@ -51,6 +51,7 @@ library
     , Introduction.VI.Example15
     , Introduction.VI.Example16
     , Introduction.VI.Example17
+    , Introduction.VI.Example18
 
   other-modules:       
       Introduction.VI.Example14.Internal
@@ -93,12 +94,15 @@ test-suite CtCI-6th-Edition-Haskell-Tests
     , Introduction.VI.Example16Spec
     , Introduction.VI.Example17
     , Introduction.VI.Example17Spec
+    , Introduction.VI.Example18
+    , Introduction.VI.Example18Spec
 
   build-tool-depends:
       hspec-discover:hspec-discover == 2.4.*
 
   build-depends:
       base       == 4.9.*
+    , fibonacci  == 0.2.*
     , hspec      == 2.4.*
     , primes     == 0.2.*
     , QuickCheck == 2.9.*
