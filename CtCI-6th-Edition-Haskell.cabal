@@ -54,6 +54,7 @@ library
     , Introduction.VI.Example18
     , Introduction.VI.Example19
     , Introduction.VI.Example20
+    , Introduction.VI.Example21
 
   other-modules:       
       Introduction.VI.Example14.Internal
@@ -100,6 +101,8 @@ test-suite CtCI-6th-Edition-Haskell-Tests
     , Introduction.VI.Example18Spec
     , Introduction.VI.Example19
     , Introduction.VI.Example19Spec
+    , Introduction.VI.Example21
+    , Introduction.VI.Example21Spec
 
   build-tool-depends:
       hspec-discover:hspec-discover == 2.4.*
