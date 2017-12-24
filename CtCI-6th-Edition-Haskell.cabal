@@ -1,0 +1,166 @@
+name:                CtCI-6th-Edition-Haskell
+version:             0.1.0.0
+synopsis:            Haskell Solutions for Cracking the Coding Interview 6th Edition
+
+-- description:         
+
+homepage:            https://github.com/careercup/CtCI-6th-Edition-Haskell
+bug-reports:         https://github.com/careercup/CtCI-6th-Edition-Haskell/issues
+-- license:             
+license-file:        LICENSE
+author:              Variuos Contributors
+maintainer:          NA
+-- copyright:           
+-- category:            
+build-type:          Simple
+cabal-version:       >= 1.10
+tested-with:         GHC == 8.0.*
+
+extra-source-files:
+    ChangeLog.md
+  , LICENSE
+  , README.md
+  , Setup.hs
+
+source-repository head
+  type:     git
+  location: https://github.com/careercup/CtCI-6th-Edition-Haskell
+
+library
+  default-language:    Haskell2010
+
+  ghc-options:         -Wall -fwarn-tabs -fwarn-monomorphism-restriction
+                       -fwarn-unused-do-bind
+
+  hs-source-dirs:
+      src
+
+  exposed-modules:
+      Introduction.VI.Example01
+    , Introduction.VI.Example02
+    , Introduction.VI.Example03
+    , Introduction.VI.Example04
+    , Introduction.VI.Example05
+    , Introduction.VI.Example06
+    , Introduction.VI.Example07
+    , Introduction.VI.Example08
+    , Introduction.VI.Example09
+    , Introduction.VI.Example10
+    , Introduction.VI.Example11
+    , Introduction.VI.Example14
+    , Introduction.VI.Example15
+    , Introduction.VI.Example16
+    , Introduction.VI.Example17
+    , Introduction.VI.Example18
+    , Introduction.VI.Example19
+    , Introduction.VI.Example20
+    , Introduction.VI.Example21
+
+  other-modules:       
+      Introduction.VI.Example14.Internal
+
+  build-depends:
+      base == 4.9.*
+
+  other-extensions:
+
+test-suite CtCI-6th-Edition-Haskell-Tests
+  default-language:    Haskell2010
+  type:                exitcode-stdio-1.0
+  main-is:             Spec.hs
+
+  ghc-options:         -Wall -fwarn-tabs -fwarn-monomorphism-restriction
+                       -fwarn-unused-do-bind
+
+  hs-source-dirs:
+      src
+    , test
+
+  other-modules:
+      Introduction.VI.Example01
+    , Introduction.VI.Example01Spec
+    , Introduction.VI.Example02
+    , Introduction.VI.Example02Spec
+    , Introduction.VI.Example03
+    , Introduction.VI.Example03Spec
+    , Introduction.VI.Example05
+    , Introduction.VI.Example05Spec
+    , Introduction.VI.Example11
+    , Introduction.VI.Example11Spec
+    , Introduction.VI.Example14
+    , Introduction.VI.Example14Spec
+    , Introduction.VI.Example14.Internal
+    , Introduction.VI.Example14.InternalSpec
+    , Introduction.VI.Example15
+    , Introduction.VI.Example15Spec
+    , Introduction.VI.Example16
+    , Introduction.VI.Example16Spec
+    , Introduction.VI.Example17
+    , Introduction.VI.Example17Spec
+    , Introduction.VI.Example18
+    , Introduction.VI.Example18Spec
+    , Introduction.VI.Example19
+    , Introduction.VI.Example19Spec
+    , Introduction.VI.Example21
+    , Introduction.VI.Example21Spec
+
+  build-tool-depends:
+      hspec-discover:hspec-discover == 2.4.*
+
+  build-depends:
+      base       == 4.9.*
+    , fibonacci  == 0.2.*
+    , hspec      == 2.4.*
+    , primes     == 0.2.*
+    , QuickCheck == 2.9.*
+
+  other-extensions:
+
+test-suite tests
+  default-language:    Haskell2010
+  type:                exitcode-stdio-1.0
+  main-is:             Main.hs
+
+  ghc-options:         -Wall -fwarn-tabs -fwarn-monomorphism-restriction
+                       -fwarn-unused-do-bind
+
+  hs-source-dirs:
+      src
+    , src/chapter-1
+    , src/chapter-2
+    , src/chapter-3
+
+  other-modules:
+--      Ch1
+--    , Ch2
+--    , Ch3
+--    , Data.Queue
+--    , Data.Stack
+--    , find-cycle
+--    , intersection
+--    , is-palindrome
+--    , is-permutation
+--    , is-rotation
+--    , is-unique
+--    , kth-last
+--    , one-away
+--    , palindrome-permutation
+--    , partition
+--    , Questions.MinStack
+--    , remove-dups
+--    , remove-node
+--    , rotate-matrix
+--    , string-compression
+--    , sum-lists
+--    , Test.MinStack
+--    , Test.Queue
+--    , Test.Stack
+--    , url-encode
+--    , zero-matrix
+
+  build-depends:
+      base
+    , hspec
+    , QuickCheck
+
+  other-extensions:
