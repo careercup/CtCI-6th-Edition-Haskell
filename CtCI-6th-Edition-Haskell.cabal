@@ -53,6 +53,7 @@ library
     , Introduction.VI.Example17
     , Introduction.VI.Example18
     , Introduction.VI.Example19
+    , Introduction.VI.Example20
 
   other-modules:       
       Introduction.VI.Example14.Internal
