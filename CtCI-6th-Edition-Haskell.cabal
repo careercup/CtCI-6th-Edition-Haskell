@@ -43,11 +43,13 @@ library
     , Introduction.VI.Question04
     , Introduction.VI.Question05
     , Introduction.VI.Question06
+    , Introduction.VI.Question09
 
   other-modules:       
 
   build-depends:
-      base == 4.9.*
+      array == 0.5.*
+    , base  == 4.9.*
 
   other-extensions:
 
@@ -78,12 +80,15 @@ test-suite CtCI-6th-Edition-Haskell-Tests
     , Introduction.VI.Question05Spec
     , Introduction.VI.Question06
     , Introduction.VI.Question06Spec
+    , Introduction.VI.Question09
+    , Introduction.VI.Question09Spec
 
   build-tool-depends:
       hspec-discover:hspec-discover == 2.4.*
 
   build-depends:
-      base       == 4.9.*
+      array      == 0.5.*
+    , base       == 4.9.*
     , hspec      == 2.4.*
     , QuickCheck == 2.9.*
 
