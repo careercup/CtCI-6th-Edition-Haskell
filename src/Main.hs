@@ -1,7 +1,5 @@
 module Main where
 
-import Test.Hspec
-import Test.QuickCheck
 import Ch1
 import Ch2
 import Ch3

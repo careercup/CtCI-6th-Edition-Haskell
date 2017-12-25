@@ -2,7 +2,6 @@ module Test.Stack where
 
 import Data.Stack
 import Test.Hspec
-import Test.QuickCheck
 import Data.Maybe (fromMaybe)
 
 exStack :: Stack Int
@@ -24,22 +23,22 @@ testStack =
       fromMaybe 0 (peek pushedStack)  `shouldBe` 1
       fromMaybe 0 (peek popedStack) `shouldBe` 3
 
-    describe "mkStack" $ do
-      it "should create a single element Stack" $ do
-        (mkStack 1) `shouldBe` (Stack [1])
-    describe "push" $ do
+    describe "mkStack" $
+      it "should create a single element Stack" $
+        mkStack 1 `shouldBe` (Stack [1] :: Stack Int)
+    describe "push" $
       it "should add an element to the stack" $ do
         push 0 exStack `shouldBe` Stack [0,1,2,3,4,5]
         push 1 emptyStack `shouldBe` mkStack 1
-    describe "pop" $ do
+    describe "pop" $
       it "should remove an element from the stack" $ do
-        pop exStack `shouldBe` (Stack [2,3,4,5])
+        pop exStack `shouldBe` Stack [2,3,4,5]
         pop emptyStack `shouldBe` emptyStack
-    describe "peek" $ do
+    describe "peek" $
       it "should return the first element in a stack" $ do
         peek exStack `shouldBe` Just 1
         peek (Stack []) `shouldBe` (Nothing :: Maybe Int)
-    describe "isEmpty" $ do
+    describe "isEmpty" $
       it "should tell if a given stack is empty" $ do
         isEmpty exStack `shouldBe` False
         isEmpty (Stack []) `shouldBe` True
