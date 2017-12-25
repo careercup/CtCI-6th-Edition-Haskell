@@ -42,6 +42,7 @@ library
     , Introduction.VI.Question03
     , Introduction.VI.Question04
     , Introduction.VI.Question05
+    , Introduction.VI.Question06
 
   other-modules:       
 
@@ -75,6 +76,8 @@ test-suite CtCI-6th-Edition-Haskell-Tests
     , Introduction.VI.Question04Spec
     , Introduction.VI.Question05
     , Introduction.VI.Question05Spec
+    , Introduction.VI.Question06
+    , Introduction.VI.Question06Spec
 
   build-tool-depends:
       hspec-discover:hspec-discover == 2.4.*
