@@ -1,8 +1,8 @@
-module Test.Queue where
+module Ch3.Test.Queue where
 
 import Test.QuickCheck
 import Test.Hspec
-import Data.Queue
+import Ch3.Data.Queue
 
 
 emptyQueue :: Queue a

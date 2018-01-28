@@ -1,4 +1,4 @@
-module Data.Queue where
+module Ch3.Data.Queue where
 
 data Queue a = Queue [a] [a]
   deriving (Show)

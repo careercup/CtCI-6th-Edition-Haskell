@@ -2,9 +2,9 @@ module Ch3 where
 
 import Test.QuickCheck
 import Test.Hspec
-import Test.Stack
-import Test.Queue
-import Test.MinStack
+import Ch3.Test.Stack
+import Ch3.Test.Queue
+import Ch3.Test.MinStack
 
 ch3 :: IO ()
 ch3 = hspec $ do
@@ -12,4 +12,3 @@ ch3 = hspec $ do
     testStack
     testQueue
     testMinStack
-      
