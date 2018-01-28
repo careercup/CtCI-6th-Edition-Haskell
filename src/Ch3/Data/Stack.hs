@@ -1,4 +1,4 @@
-module Data.Stack where
+module Ch3.Data.Stack where
 
 data Stack a = Stack [a]
   deriving (Eq, Show)

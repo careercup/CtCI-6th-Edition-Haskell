@@ -1,9 +1,9 @@
-module Test.MinStack where
+module Ch3.Test.MinStack where
 
 import Test.QuickCheck
 import Test.Hspec
-import Questions.MinStack
-import qualified Data.Stack as S
+import Ch3.Questions.MinStack
+import qualified Ch3.Data.Stack as S
 
 exStack = push 1 (push 7 (push 2 (push 6 (mkMinStack 9))))
 

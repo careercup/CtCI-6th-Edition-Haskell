@@ -1,0 +1,50 @@
+name:           CtCI-6th-Edition-Haskell
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/careercup/CtCI-6th-Edition-Haskell#readme>
+homepage:       https://github.com/careercup/CtCI-6th-Edition-Haskell#readme
+bug-reports:    https://github.com/careercup/CtCI-6th-Edition-Haskell/issues
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/careercup/CtCI-6th-Edition-Haskell
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+    , QuickCheck
+
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_CtCI_6th_Edition_Haskell
+    , Ch1
+    , Ch2
+    , Ch3
+    , Ch3.Data.Queue
+    , Ch3.Data.Stack
+    , Ch3.Questions.MinStack
+    , Ch3.Test.MinStack
+    , Ch3.Test.Queue
+    , Ch3.Test.Stack
+  default-language: Haskell2010
+
+test-suite CtCI-6th-Edition-Haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      CtCI-6th-Edition-Haskell
+    , base >=4.7 && <5
+  other-modules:
+      Paths_CtCI_6th_Edition_Haskell
+  default-language: Haskell2010

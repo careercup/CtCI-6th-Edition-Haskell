@@ -1,6 +1,6 @@
-module Test.Stack where
+module Ch3.Test.Stack where
 
-import Data.Stack
+import Ch3.Data.Stack
 import Test.Hspec
 import Test.QuickCheck
 import Data.Maybe (fromMaybe)
